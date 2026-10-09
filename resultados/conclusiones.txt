@@ -1,0 +1,23 @@
+Se compararon 8 configuraciones entrenadas de las 8 previstas en el modo completo. La seleccionada por macro-F1 de validación fue resnet50_lote16_dropout0.50 (resnet50), con macro-F1 de validación 0.9468 y accuracy de validación 0.9474. El desempate previsto, si hiciera falta, usa la accuracy de validación y después el menor tiempo.
+
+resnet50 tiene macro-F1 medio de validación 0.9448 y máximo 0.9468 en 4 configuraciones.
+
+vgg16 tiene macro-F1 medio de validación 0.9099 y máximo 0.9202 en 4 configuraciones.
+
+El fine-tuning modificó el macro-F1 de validación en un promedio de +0.0386 (mínimo +0.0204, máximo +0.0699). En el modelo elegido el cambio fue +0.0358.
+
+El macro-F1 medio de validación según dropout fue 0.3: 0.9263, 0.5: 0.9284. Es una descripción de la malla ejecutada, no una prueba de que un valor sea universalmente mejor.
+
+El macro-F1 medio de validación según tamaño de lote fue 16: 0.9311, 32: 0.9236. Es una descripción de la malla ejecutada, no una prueba de que un valor sea universalmente mejor.
+
+El tiempo acumulado de los experimentos fue de 67.4 minutos. El modelo elegido tardó 7.7 minutos, incluidas las dos fases y el cálculo de macro-F1 de validación en cada época.
+
+En la mejor época de fine-tuning del modelo elegido, la accuracy de entrenamiento fue 0.9498 y la de validación 0.9474 (diferencia +0.0024). La diferencia es pequeña. Eso no demuestra, por sí solo, que no exista sobreajuste.
+
+En el conjunto de prueba, no usado para elegir hiperparámetros, el modelo obtuvo accuracy 0.9365, precisión macro 0.9348, recall macro 0.9354 y F1 macro 0.9351.
+
+La clase con menor F1 de prueba fue roses (0.9026) y la de mayor F1 fue dandelion (0.9665).
+
+El F1 macro de prueba menos el macro-F1 de validación es -0.0118. La caída es pequeña y no demuestra, por sí sola, un problema grave de generalización.
+
+Las limitaciones permanecen aunque la métrica sea alta: el modelo distingue cinco categorías de tf_flowers, las fotografías están centradas en la flor y los filtros iniciales vienen de ImageNet. En las redes implementadas, sin la cabeza original de ImageNet y con la cabeza de cinco clases, VGG16 tiene 14.717.253 parámetros totales y ResNet50 tiene 23.597.957. El tiempo medio fue de 8.5 minutos en VGG16 y de 8.3 minutos en ResNet50. Esos tiempos son cercanos: el número total de parámetros no explica por sí solo la duración de cada experimento. Ampliar épocas, descongelar un bloque más o incorporar otro aumento geométrico son extensiones posibles; habría que volver a separar la prueba y no reutilizar estos números de test para escoger la variante nueva.

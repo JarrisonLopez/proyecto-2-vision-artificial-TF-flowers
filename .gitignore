@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# TensorFlow, Keras y datos descargados
+.keras/
+tensorflow_datasets/
+
+# Pesos, checkpoints y archivos empaquetados
+*.h5
+*.weights.h5
+*.keras
+*.pb
+*.tflite
+resultados/checkpoints/
+resultados/cache/
+resultados/*.zip
+resultados/**/*.zip
+
+# Respaldo local del notebook sin ejecutar y material interno del curso
+respaldos/
+info_profe/
+
+# Archivos temporales de preparación
+_*.py
+_*.txt
+_cell*

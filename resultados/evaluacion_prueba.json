@@ -1,0 +1,74 @@
+{
+  "id_modelo": "resnet50_lote16_dropout0.50",
+  "arquitectura": "resnet50",
+  "accuracy": 0.9364791288566243,
+  "precision_macro": 0.9348376064726729,
+  "recall_macro": 0.9353996101364522,
+  "f1_macro": 0.9350646462515932,
+  "f1_por_clase": {
+    "dandelion": 0.966542750929368,
+    "daisy": 0.9523809523809523,
+    "tulips": 0.9205020920502092,
+    "sunflowers": 0.9333333333333333,
+    "roses": 0.9025641025641026
+  },
+  "precision_por_clase": {
+    "dandelion": 0.9701492537313433,
+    "daisy": 0.9574468085106383,
+    "tulips": 0.9243697478991597,
+    "sunflowers": 0.9333333333333333,
+    "roses": 0.8888888888888888
+  },
+  "recall_por_clase": {
+    "dandelion": 0.9629629629629629,
+    "daisy": 0.9473684210526315,
+    "tulips": 0.9166666666666666,
+    "sunflowers": 0.9333333333333333,
+    "roses": 0.9166666666666666
+  },
+  "soporte_por_clase": {
+    "dandelion": 135,
+    "daisy": 95,
+    "tulips": 120,
+    "sunflowers": 105,
+    "roses": 96
+  },
+  "matriz": [
+    [
+      130,
+      2,
+      0,
+      3,
+      0
+    ],
+    [
+      2,
+      90,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      110,
+      1,
+      9
+    ],
+    [
+      2,
+      2,
+      2,
+      98,
+      1
+    ],
+    [
+      0,
+      0,
+      6,
+      2,
+      88
+    ]
+  ],
+  "reporte": "              precision    recall  f1-score   support\n\n   dandelion     0.9701    0.9630    0.9665       135\n       daisy     0.9574    0.9474    0.9524        95\n      tulips     0.9244    0.9167    0.9205       120\n  sunflowers     0.9333    0.9333    0.9333       105\n       roses     0.8889    0.9167    0.9026        96\n\n    accuracy                         0.9365       551\n   macro avg     0.9348    0.9354    0.9351       551\nweighted avg     0.9368    0.9365    0.9366       551\n"
+}

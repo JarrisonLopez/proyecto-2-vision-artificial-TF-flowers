@@ -1,0 +1,11 @@
+{
+  "id": "resnet50_lote16_dropout0.50",
+  "arquitectura": "resnet50",
+  "tamano_lote": 16,
+  "dropout": 0.5,
+  "tasa_cabeza": 0.001,
+  "tasa_ajuste": 1e-05,
+  "macro_f1_validacion": 0.9468296983686342,
+  "accuracy_validacion": 0.9473684210526315,
+  "ruta_modelo": "resultados/mejor_modelo.keras"
+}
